@@ -1,0 +1,32 @@
+.four-0-four-image{
+    display: block;
+    margin: 60px auto;
+}
+
+.four-0-four-msg{
+    text-align: center;
+    color: #383838;
+    margin-bottom: 15em;
+    padding: 2em;
+    font-size: 20px
+}
+
+img.four-0-four-image{
+    width: 700px;
+}
+
+.four-0-four-msg a{
+    color: #383838;
+}
+
+@media only screen and (max-width: 767px) 
+{
+
+    img.four-0-four-image{
+    width: 200px;
+    }
+
+    .four-0-four-msg{
+    font-size: 17px
+    }    
+}

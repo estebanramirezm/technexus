@@ -1,0 +1,444 @@
+const bestSellers = `
+[  
+  {    
+    "productName": "Bose QuietComfort",
+    "id": 1,
+    "company": "Bose",          
+    "imagePath": "/media/boseheadphones1.jpg", 
+    "imagePath2": "/media/boseheadphones2.jpg",          
+    "imagePath3": "/media/boseheadphones3.jpg",          
+    "imagePath4": "/media/boseheadphones4.jpg",                   
+    "shortDescription": " 35 II - Noise Cancelling | Silver",
+    "description": "These are premium over-ear headphones designed for those who want to experience exceptional sound quality with noise cancellation technology. They are engineered with Bose's proprietary noise-cancellation technology, which actively blocks out external noise to provide an immersive audio experience. The headphones feature intuitive touch controls, a noise-rejecting dual-microphone system for clear phone calls and voice assistance, and up to 20 hours of wireless battery life",
+    "price": "299.00",          
+    "sale": "194.99",          
+    "tags": 
+      [               
+        "Technology",               
+        "Audio",               
+        "Headphones"          
+      ]
+    },
+    {
+      "productName": "Apple AirPods Pro",
+      "id": "2",  
+      "company": "Apple",      
+      "imagePath": "/media/airpods1.jpg", 
+      "imagePath2": "/media/airpods2.jpg",      
+      "imagePath3": "/media/airpods3.jpg",      
+      "imagePath4": "/media/airpods4.jpg",           
+      "shortDescription": "2nd Gen | Wireless Charging Case",
+      "description": "These are the latest and most advanced wireless earbuds from Apple, featuring active noise cancellation and a comfortable, customizable fit. They are designed to deliver high-quality sound with a transparency mode that allows users to hear their surroundings while listening to music or making calls. They come with a wireless charging case that provides additional battery life.",     
+      "price": "249.00",      
+      "tags": [         
+        "Technology",         
+        "Audio",         
+        "Earbuds"      
+      ]
+    },
+    {
+      "productName": "Apple iPad 10.9in", 
+      "id": "3",     
+      "company": "Apple",      
+      "imagePath": "/media/ipad1.jpg",     
+      "imagePath2": "/media/ipad2.jpg",      
+      "imagePath3": "/media/ipad3.jpg",      
+      "imagePath4": "/media/ipad4.jpg",       
+      "shortDescription": "Latest Model | 256GB - Silver",
+      "description": "This is the latest model of the popular Apple iPad, featuring a 10.9-inch Liquid Retina display, A14 Bionic chip, and 256GB of storage. The tablet is designed for both work and play, with support for the Apple Pencil and Magic Keyboard. It also features a 12MP rear camera and a 7MP front camera for high-quality photos and video calls.",     
+      "price": "549.00",      
+      "tags": [         
+        "Technology",         
+        "Tablets",         
+        "Apple"      
+      ]
+    },
+    {
+      "productName": "Canon EOS Rebel T7",
+      "id": "4",
+      "company": "Canon",
+      "imagePath": "/media/canon1.jpg",
+      "imagePath2": "/media/canon2.jpg",
+      "imagePath3": "/media/canon3.jpg",
+      "imagePath4": "/media/canon4.jpg",
+      "shortDescription": "18-55mm Lens | 24.1 Megapixel CMOS sensor",
+      "description": "This is a high-quality digital camera from Canon, featuring a 24.1-megapixel CMOS sensor and an 18-55mm lens. It is designed to take stunning photos and videos with exceptional detail and clarity. The camera also features built-in Wi-Fi and NFC connectivity, making it easy to share photos and videos with friends and family.",
+      "price": "429.99",
+      "sale": "399.99",
+      "tags": [
+        "Technology",
+        "Photography",
+        "Cameras"
+      ]
+    },
+    {
+      "productName": "Anker PowerCore",
+      "id": "5",
+      "company": "Anker",
+      "imagePath": "/media/anker1.jpg",
+      "imagePath2": "/media/anker2.jpg",
+      "imagePath3": "/media/anker3.jpg",
+      "imagePath4": "/media/anker4.jpg",
+      "shortDescription": "10K mAh | USB-C",
+      "description": "This is a portable charger from Anker with a capacity of 10,000mAh, which is enough to charge most smartphones and other devices multiple times. It features a USB-C port for fast charging, and it's compact and lightweight, making it easy to take on-the-go.",
+      "price": "25.99",
+      "tags": [
+        "Technology",
+        "Accessories",
+        "Chargers"
+      ]
+    },
+    {
+      "productName": "Platinum Adapter",
+      "id": "6",
+      "company": "Platinum",
+      "imagePath": "/media/adapter1.jpg",
+      "imagePath2": "/media/adapter2.jpg",
+      "imagePath3": "/media/adapter3.jpg",
+      "imagePath4": "/media/adapter4.jpg",
+      "shortDescription": "USB-C to USB A | White",
+      "description": "This is a USB-C to USB-A adapter from Platinum, designed to connect USB-C devices to standard USB-A ports. It is compact and lightweight, making it easy to take on-the-go, and it allows you to connect a wide range of USB-C devices to your laptop, desktop, or other devices with USB-A ports.",
+      "price": "9.99",
+      "tags": [
+        "Technology",
+        "Accessories",
+        "Cables"
+      ]
+    }
+]`;
+
+
+const allCategories = `
+[  
+  {    
+  "category": "Smart Home",    
+  "products": [      
+    {        
+      "productName":"Echo",
+      "id": "7",    
+      "company": "Amazon",        
+      "imagePath": "/media/echo1.jpg",
+      "imagePath2": "/media/echo2.jpg",        
+      "imagePath3": "/media/echo3.jpg",        
+      "imagePath4": "/media/echo4.jpg",             
+      "shortDescription":"(4th Gen) | Charcoal",
+      "description": "This is the latest generation of the popular smart speaker from Amazon, featuring a new spherical design and powerful speakers that deliver crisp, clear sound. The Echo is designed to be the central hub for your smart home, allowing you to control compatible devices, play music, set alarms, and get information using voice commands.",    
+      "price": "99.99",        
+      "tags": [  
+        "Technology",           
+        "Consumer Electronics",           
+        "Computer Hardware"        
+      ]
+      },
+      {
+        "productName":"Nest Hub",
+        "id": "8",
+        "company": "Google",
+        "imagePath": "/media/nest1.jpg",
+        "imagePath2": "/media/nest2.jpg",
+        "imagePath3": "/media/nest3.jpg",
+        "imagePath4": "/media/nest4.jpg",
+        "shortDescription":"2nd Gen | Charcoal",
+        "description": "This is the latest version of Google's popular smart display, featuring a 7-inch touchscreen display and powerful speakers that deliver clear and balanced sound. The Nest Hub is designed to help you manage your day, providing personalized information and recommendations based on your preferences. It can also control compatible smart home devices and play music, podcasts, and videos.",
+        "price": "99.99",
+        "sale": "74.99",
+        "tags": [
+           "Technology",
+           "Consumer Electronics",
+           "Computer Hardware"
+        ]
+      },
+      {
+        "productName": "Hue Smart LED Bulb",
+        "id": "9",
+        "company": "Philips",
+        "imagePath": "/media/hue1.jpg",
+        "imagePath2": "/media/hue2.jpg",
+        "imagePath3": "/media/hue3.jpg",
+        "imagePath4": "/media/hue4.jpg",
+        "shortDescription": "A19 | White",
+        "description": "This is a smart LED light bulb from Philips Hue that can be controlled using a smartphone app or voice commands through a compatible smart home device. The bulb emits soft white light and is dimmable, allowing you to adjust the brightness to your liking. It can also be scheduled to turn on and off at specific times, making it easy to automate your lighting.",
+        "price": "15.99",
+        "tags": [
+          "Technology",
+          "Smart Home",
+          "Lighting"
+        ]
+      },
+      {
+        "productName": "Nest Thermostat",
+        "id": "10",
+        "company": "Google",
+        "imagePath": "/media/thermostat1.jpeg",
+        "imagePath2": "/media/thermostat2.jpeg",
+        "imagePath3": "/media/thermostat3.jpeg",
+        "imagePath4": "/media/thermostat4.jpeg",
+        "shortDescription": " Programmable | White",
+        "description": "This is a programmable smart thermostat from Nest, designed to help you save energy and stay comfortable. It learns your schedule and preferences, automatically adjusting the temperature when you're home and turning it down when you're away. It can also be controlled using a smartphone app, allowing you to adjust the temperature from anywhere.",
+        "price": "249.99",
+        "tags": [
+          "Technology",
+          "Smart Home",
+          "Heating and Cooling"
+        ]
+      },
+      {
+        "productName": "iRobot Roomba",
+        "id": "11",
+        "company": "iRobot",
+        "imagePath": "/media/roomba1.jpg",
+        "imagePath2": "/media/roomba2.jpg",
+        "imagePath3": "/media/roomba3.jpg",
+        "imagePath4": "/media/roomba4.jpg",
+        "shortDescription": "694 Wi-Fi | Black",
+        "description": "This is a robotic vacuum cleaner from iRobot, designed to clean your floors with minimal effort. It features a powerful motor and multi-surface brushes that can pick up dirt, dust, and pet hair from carpets, rugs, and hard floors. It also has Wi-Fi connectivity, allowing you to control it using a smartphone app or voice commands through a compatible smart home device.",
+        "price": "179.99",
+        "sale": "274.99",
+        "tags": [
+          "Technology",
+          "Smart Home",
+          "Cleaning"
+        ]
+      },
+      {
+        "productName": "Ring Video Doorbell",
+        "id": "12",
+        "company": "Ring",
+        "imagePath": "/media/ring1.jpg",
+        "imagePath2": "/media/ring2.jpg",
+        "imagePath3": "/media/ring3.jpg",
+        "imagePath4": "/media/ring4.jpg",
+        "shortDescription": "Wired | (2021 release) ",
+        "description": "This is the latest version of the popular video doorbell from Ring, designed to provide you with a clear view of who's at your door. It features a 1080p HD camera and two-way audio, allowing you to see, hear, and speak to visitors from your smartphone or tablet. It also has customizable motion detection, so you can get alerts when someone is at your door even if they don't ring the doorbell",
+        "price": "64.99",
+        "sale": "38.99",
+        "tags": [
+          "Technology",
+          "Smart Home",
+          "Security"
+        ]
+      } 
+    ]
+  },
+  {
+    "category": "Wearables",
+    "products": [
+      {
+        "productName": "Apple Watch",  
+        "id": "13",    
+        "company": "Apple",      
+        "imagePath": "/media/apple-watch1.jpg",
+        "imagePath2": "/media/apple-watch2.jpg",      
+        "imagePath3": "/media/apple-watch3.jpg",      
+        "imagePath4": "/media/apple-watch4.jpg",       
+        "shortDescription": "Series 8 (GPS) | S/M - Silver", 
+        "description": "This is the latest iteration of Apple's smartwatch, featuring a stunning Retina display and advanced health tracking features. With GPS connectivity, you can accurately track your workouts and outdoor activities without needing to bring your phone with you. It also offers seamless integration with other Apple devices, allowing you to easily receive notifications, make calls, and control your smart home devices from your wrist.",     
+        "price": "399.00",      
+        "tags": [         
+          "Technology",         
+          "Wearables",         
+          "Fitness"      
+        ]
+      },
+      {
+        "productName": "Fitbit Charge",
+        "id": "14",
+        "company": "Fitbit",
+        "imagePath": "/media/fitbit-charge1.jpg",
+        "imagePath2": "/media/fitbit-charge2.jpg",
+        "imagePath3": "/media/fitbit-charge3.jpg",
+        "imagePath4": "/media/fitbit-charge4.jpg",
+        "shortDescription": "5th Gen | Graphite",
+        "description": "This is the latest version of Fitbit's popular fitness tracker, featuring advanced health tracking features and a sleek, modern design. It offers continuous heart rate monitoring, built-in GPS, and a range of workout modes to help you achieve your fitness goals. It also has a long battery life, allowing you to wear it all day and night.",
+        "price": "149.95",
+        "sale": "129.95",
+        "tags": [
+          "Technology",
+          "Wearables",
+          "Fitness"
+        ]
+      },
+      {
+        "productName": "Galaxy Watch5",
+        "id": "15",
+        "company": "Samsung",
+        "imagePath": "/media/samsungwatch1.jpg",
+        "imagePath2": "/media/samsungwatch2.jpg",
+        "imagePath3": "/media/samsungwatch3.jpg",
+        "imagePath4": "/media/samsungwatch4.jpg",
+        "shortDescription": "40mm | Pink Gold",
+        "description": "This is the latest smartwatch from Samsung, featuring a stylish design and advanced health tracking features. It offers GPS connectivity, continuous heart rate monitoring, and a range of workout modes to help you stay active and healthy. It also has built-in voice control, allowing you to control your smart home devices, make calls, and send messages using your voice.",
+        "price": "179.99",
+        "sale": "129.95",
+        "tags": [
+          "Technology",
+          "Wearables",
+          "Fitness"
+        ]
+      },
+      {
+        "productName": "Garmin Venu 2 Plus",
+        "id": "16",
+        "company": "Garmin",
+        "imagePath": "/media/garmin1.jpg",
+        "imagePath2": "/media/garmin2.jpg",
+        "imagePath3": "/media/garmin3.jpg",
+        "imagePath4": "/media/garmin4.jpg",
+        "shortDescription": "43 mm | Slate",
+        "description": "This is a high-end GPS smartwatch from Garmin, designed for serious athletes and fitness enthusiasts. It offers advanced health tracking features, including GPS connectivity, continuous heart rate monitoring, and a range of workout modes. It also has built-in music storage and playback, allowing you to listen to your favorite tunes while you work out.",
+        "price": "449.99",
+        "sale": "399.99",
+        "tags": [
+          "Technology",
+          "Wearables",
+          "Fitness"
+        ]
+      },
+      {
+        "productName": "Timex Ex Chrono",
+        "id": "17",
+        "company": "Timex",
+        "imagePath": "/media/timex1.jpg",
+        "imagePath2": "/media/timex2.jpg",
+        "imagePath3": "/media/timex3.jpg",
+        "imagePath4": "/media/timex4.jpg",
+        "shortDescription": "43mm | Brown/Black",
+        "description": "This is a stylish and rugged chronograph watch from Timex, designed for everyday wear. It features a durable stainless steel case and a classic leather strap, as well as a stopwatch function and date display. It's water-resistant up to 100 meters, making it suitable for swimming and snorkeling.",
+        "price": "115.00",
+        "tags": [
+          "Technology",
+          "Wearables",
+          "Fitness"
+        ]
+      },
+      {
+        "productName": "Pixel Watch",
+        "id": "18",
+        "company": "Fitbit",
+        "imagePath": "/media/pixelwatch1.jpg",
+        "imagePath2": "/media/pixelwatch2.jpg",
+        "imagePath3": "/media/pixelwatch3.jpg",
+        "imagePath4": "/media/pixelwatch4.jpg",
+        "shortDescription": "41mm | Obsidian Black",
+        "description": "This is the latest smartwatch from Google, featuring a sleek design and advanced health tracking features. It offers GPS connectivity, continuous heart rate monitoring, and a range of workout modes to help you stay active and healthy. It also has built-in Google Assistant, allowing you to control your smart home devices, make calls, and send messages using your voice.",
+        "price": "279.99",
+        "price": "219.99",
+        "tags": [
+          "Technology",
+          "Wearables",
+          "Fitness"
+        ]
+      }
+    ]
+  },
+    {
+      "category": "Mobile Devices",
+      "products": [
+        {
+          "productName": "iPhone 14",
+          "id": "19",
+          "company": "Apple",
+          "imagePath": "/media/iphone1.jpg",
+          "imagePath2": "/media/iphone2.jpg",
+          "imagePath3": "/media/iphone3.jpg",
+          "imagePath4": "/media/iphone4.jpg",
+          "shortDescription": "Unlocked | 128GB - Blue",
+          "description": "This is the latest smartphone from Apple, featuring a stunning Super Retina XDR display and advanced camera system. It offers 5G connectivity for lightning-fast download and upload speeds, as well as Face ID for secure and convenient authentication. It also has a long battery life, allowing you to use it all day without needing to recharge.",
+          "price": "799.99",
+          "tags": [
+            "Technology",
+            "Mobile Devices",
+            "Smartphones"
+          ]
+        },
+        {
+          "productName": "Galaxy S23",
+          "id": "20",
+          "company": "Samsung",
+          "imagePath": "/media/galaxy1.jpg",
+          "imagePath2": "/media/galaxy2.jpg",
+          "imagePath3": "/media/galaxy3.jpg",
+          "imagePath4": "/media/galaxy4.jpg",
+          "shortDescription": "Unlocked | 128GB - Black",
+          "description": "This is the latest smartphone from Samsung, featuring a stunning Dynamic AMOLED display and advanced camera system. It offers 5G connectivity for lightning-fast download and upload speeds, as well as biometric authentication for secure and convenient access. It also has a long battery life, allowing you to use it all day without needing to recharge.",
+          "price": "799.99",
+          "sale": "599.99",
+          "tags": [
+            "Technology",
+            "Mobile Devices",
+            "Smartphone"
+          ]
+        },
+        {
+          "productName": "Pixel 7",
+          "id": "21",
+          "company": "Google",
+          "imagePath": "/media/pixel1.jpg",
+          "imagePath2": "/media/pixel2.jpg",
+          "imagePath3": "/media/pixel3.jpg",
+          "imagePath4": "/media/pixel4.jpg",
+          "shortDescription": "Unlocked | 128GB - Snow",
+          "description": "This is the latest tablet from Google, featuring a stunning 10.2-inch display and powerful performance. It offers a range of productivity and entertainment features, including split-screen multitasking, handwriting recognition, and access to the Google Play Store. It also has a long battery life, making it perfect for on-the-go use.",
+          "price": "899.00",
+          "tags": [
+            "Technology",
+            "Mobile Devices",
+            "Smartphone"
+          ]
+        },
+        {
+          "productName": "Moto G Stylus",
+          "id": "22",
+          "company": "OnePlus",
+          "imagePath": "/media/motorola1.jpg",
+          "imagePath2": "/media/motorola2.jpg",
+          "imagePath3": "/media/motorola3.jpg",
+          "imagePath4": "/media/motorola4.jpg",
+          "shortDescription": "Unlocked | 128GB - Dusty Rose",
+          "description": "The Moto G Stylus is a versatile smartphone that comes with a built-in stylus pen, making it easy to jot down notes, draw, or navigate your device with precision. With 128GB of storage, you can store all your important files, photos, and apps, and the Dusty Rose color adds a touch of elegance to your device.",
+          "price": "299.99",
+          "sale": "169.99",
+          "tags": [
+            "Technology",
+            "Mobile Devices",
+            "Smartphone"
+          ]
+        },
+        {
+          "productName": "Nokia G100",
+          "id": "23",
+          "company": "Nokia",
+          "imagePath": "/media/nokia1.jpg",
+          "imagePath2": "/media/nokia2.jpg",
+          "imagePath3": "/media/nokia3.jpg",
+          "imagePath4": "/media/nokia4.jpg",
+          "shortDescription": "Unlocked | 128GB Nordic Blue",
+          "description": "The Nokia G100 is a powerful and versatile smartphone that features a large 6.81-inch display and 128GB of storage, providing ample space for all your important files, photos, and apps. With its Nordic Blue color, this phone has a sleek and modern look that is sure to turn heads.",
+          "price": "199.99",
+          "sale": "169.99",
+          "tags": [
+            "Technology",
+            "Mobile Devices",
+            "Gaming Phone"
+          ]
+        },
+        {
+          "productName": "Xperia 5 IV",
+          "id": "24",
+          "company": "Sony",
+          "imagePath": "/media/xperia1.jpg",
+          "imagePath2": "/media/xperia2.jpg",
+          "imagePath3": "/media/xperia3.jpg",
+          "imagePath4": "/media/xperia4.jpg",
+          "shortDescription": "Unlocked | 128GB - Black",
+          "description": "The Xperia 5 IV is a top-of-the-line smartphone that boasts a stunning 6.1-inch OLED display and 128GB of storage, providing ample space for all your important files, photos, and apps. With its sleek black color, this phone has a sophisticated and modern look that is sure to impress.",
+          "price": "999.99",
+          "tags": [
+            "Technology",
+            "Mobile Devices",
+            "Budget Smartphone"
+          ]
+        }
+      ]
+    }    
+]`;
